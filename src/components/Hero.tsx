@@ -1,4 +1,16 @@
+
 import React from 'react';
+import { Tooth } from 'lucide-react';
+
+const UbuntuLogo = () => (
+    <div className="flex items-center gap-3">
+      <Tooth className="h-16 w-16 md:h-20 md:w-20 text-white flex-shrink-0" strokeWidth={1.2}/>
+      <div>
+        <h2 className="text-3xl md:text-4xl font-serif text-white">Ubuntu</h2>
+        <p className="text-lg md:text-xl font-light text-white tracking-[0.2em]">DENTAL</p>
+      </div>
+    </div>
+  );
 
 export const Hero: React.FC = () => {
   const handleBookAppointment = () => {
@@ -7,28 +19,38 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <section className="bg-[rgba(203,150,48,0.7)] flex w-[571px] max-w-full flex-col text-xl text-white font-normal pt-[340px] pb-[183px] px-20 max-md:pl-5 max-md:py-[100px]">
-      <div className="flex mr-[-246px] mb-[-37px] flex-col items-center max-md:max-w-full max-md:mb-2.5">
-        <h1 className="text-[64px] self-stretch max-md:max-w-full max-md:text-[40px]">
-          YOUR{" "}
-          <span className="font-bold text-white">SM</span>
-          <span className="font-bold text-[rgba(219,182,110,1)]">ILE</span>
+    <section className="flex flex-col lg:flex-row w-full">
+      {/* Left side content */}
+      <div className="w-full lg:w-5/12 bg-[#cb9630] text-white flex flex-col justify-center p-8 sm:p-12 md:p-16">
+        <div className="mb-10">
+          <UbuntuLogo />
+        </div>
+        
+        <h1 className="text-4xl sm:text-5xl font-light leading-tight">
+          YOUR <span className="font-bold text-[#DBB66E]">SMILE</span>
           <br />
-          IS IN OUR <span className="text-[rgba(219,182,110,1)]">HANDS</span>
+          IS IN OUR <span className="font-bold text-[#DBB66E]">HANDS</span>
         </h1>
-        <p className="leading-10 tracking-[0.6px] text-center mt-[70px] max-md:mt-10">
-          <span className="font-bold">Trust Ubuntu Dental to </span>
-          <span className="font-bold text-[rgba(203,150,48,1)]">keep your smile</span>
-          <br />
-          <span className="font-bold">healthy and </span>
-          <span className="font-bold text-[rgba(203,150,48,1)]">bright</span>
+        
+        <p className="mt-6 text-base sm:text-lg">
+          Trust Ubuntu Dental to keep your smile healthy and bright
         </p>
+        
         <button
           onClick={handleBookAppointment}
-          className="bg-white w-[314px] max-w-full text-[rgba(203,150,48,1)] font-bold tracking-[0.6px] leading-10 mt-8 px-12 py-3 rounded-[10px] hover:bg-gray-100 transition-colors max-md:px-5"
+          className="mt-8 bg-white text-[#cb9630] font-bold py-3 px-8 rounded-lg shadow-md hover:bg-gray-200 transition-colors self-start"
         >
           Book an appointment
         </button>
+      </div>
+      
+      {/* Right side image */}
+      <div className="w-full lg:w-7/12">
+        <img 
+          src="/lovable-uploads/51c120f5-a0b4-4305-ac02-f277704c1c43.png" 
+          alt="Smiling woman with perfect teeth" 
+          className="w-full h-full object-cover min-h-[300px] sm:min-h-[400px] lg:min-h-0" 
+        />
       </div>
     </section>
   );
