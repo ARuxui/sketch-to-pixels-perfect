@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 export const Hero: React.FC = () => {
@@ -8,23 +7,16 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <section className="relative w-full h-[600px] flex items-center justify-center text-white text-center">
-      <img
-        src="https://cdn.builder.io/api/v1/image/assets/be7308bb321943b38906633f2d62f11a/0cb0aaf88fea9f2a62620e02e0661a6c13389831?placeholderIfAbsent=true"
-        alt="Dental instruments background"
-        className="absolute inset-0 w-full h-full object-cover"
-      />
-      <div className="absolute inset-0 bg-black bg-opacity-30" />
-      <div className="absolute inset-0 bg-[rgba(203,150,48,0.7)]" />
-      <div className="relative z-10 flex flex-col items-center px-4">
-        <h1 className="text-4xl md:text-6xl leading-tight">
+    <section className="bg-[rgba(203,150,48,0.7)] flex w-[571px] max-w-full flex-col text-xl text-white font-normal pt-[340px] pb-[183px] px-20 max-md:pl-5 max-md:py-[100px]">
+      <div className="flex mr-[-246px] mb-[-37px] flex-col items-center max-md:max-w-full max-md:mb-2.5">
+        <h1 className="text-[64px] self-stretch max-md:max-w-full max-md:text-[40px]">
           YOUR{" "}
           <span className="font-bold text-white">SM</span>
           <span className="font-bold text-[rgba(219,182,110,1)]">ILE</span>
           <br />
-          IS IN OUR <span className="font-bold text-[rgba(219,182,110,1)]">HANDS</span>
+          IS IN OUR <span className="text-[rgba(219,182,110,1)]">HANDS</span>
         </h1>
-        <p className="mt-6 text-lg md:text-xl max-w-2xl leading-relaxed">
+        <p className="leading-10 tracking-[0.6px] text-center mt-[70px] max-md:mt-10">
           <span className="font-bold">Trust Ubuntu Dental to </span>
           <span className="font-bold text-[rgba(203,150,48,1)]">keep your smile</span>
           <br />
@@ -33,7 +25,7 @@ export const Hero: React.FC = () => {
         </p>
         <button
           onClick={handleBookAppointment}
-          className="mt-8 bg-white text-[rgba(203,150,48,1)] font-bold py-3 px-12 rounded-[10px] hover:bg-gray-100 transition-colors text-xl"
+          className="bg-white w-[314px] max-w-full text-[rgba(203,150,48,1)] font-bold tracking-[0.6px] leading-10 mt-8 px-12 py-3 rounded-[10px] hover:bg-gray-100 transition-colors max-md:px-5"
         >
           Book an appointment
         </button>
