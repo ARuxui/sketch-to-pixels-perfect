@@ -1,56 +1,43 @@
 
-import React from "react";
+import React from 'react';
 
 export const Hero: React.FC = () => {
-  // Placeholder logo and woman - swap src as needed!
-  const logo =
-    "https://cdn.builder.io/api/v1/image/assets/be7308bb321943b38906633f2d62f11a/3aff4a7b5dd68c319448da48e3dfbae8dea129a4?placeholderIfAbsent=true";
-  const woman =
-    "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=570&q=80&facepad=3"; // A smiling woman
-
   const handleBookAppointment = () => {
-    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+    // Scroll to contact form or implement booking logic
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <section
-      className="w-full min-h-[570px] flex flex-col md:flex-row items-stretch bg-white"
-      id="hero"
-    >
-      {/* Left - Gold area with logo, title, etc */}
-      <div className="md:w-1/2 w-full bg-[rgba(203,150,48,0.7)] flex flex-col px-8 md:px-16 justify-center py-10 md:py-0 relative">
-        <img
-          src={logo}
-          alt="Ubuntu Dental logo"
-          className="w-36 h-auto mb-8 md:mb-10 mt-2 md:mt-0"
-        />
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight tracking-tight mb-4" style={{ lineHeight: 1.08 }}>
-          YOUR <span className="font-bold text-[rgba(219,182,110,1)]">SMILE</span>
+    <section className="relative w-full h-[600px] flex items-center justify-center text-white text-center">
+      <img
+        src="https://cdn.builder.io/api/v1/image/assets/be7308bb321943b38906633f2d62f11a/0cb0aaf88fea9f2a62620e02e0661a6c13389831?placeholderIfAbsent=true"
+        alt="Dental instruments background"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-black bg-opacity-30" />
+      <div className="absolute inset-0 bg-[rgba(203,150,48,0.7)]" />
+      <div className="relative z-10 flex flex-col items-center px-4">
+        <h1 className="text-4xl md:text-6xl leading-tight">
+          YOUR{" "}
+          <span className="font-bold text-white">SM</span>
+          <span className="font-bold text-[rgba(219,182,110,1)]">ILE</span>
           <br />
-          IS IN OUR{" "}
-          <span className="font-bold text-[rgba(219,182,110,1)]">HANDS</span>
+          IS IN OUR <span className="font-bold text-[rgba(219,182,110,1)]">HANDS</span>
         </h1>
-        <p className="text-lg md:text-xl font-medium text-white mb-8 mt-4 max-w-md">
-          Trust Ubuntu Dental to keep your smile{" "}
-          <span className="text-[rgba(219,182,110,1)] font-bold">healthy and bright</span>.
+        <p className="mt-6 text-lg md:text-xl max-w-2xl leading-relaxed">
+          <span className="font-bold">Trust Ubuntu Dental to </span>
+          <span className="font-bold text-[rgba(203,150,48,1)]">keep your smile</span>
+          <br />
+          <span className="font-bold">healthy and </span>
+          <span className="font-bold text-[rgba(203,150,48,1)]">bright</span>
         </p>
         <button
           onClick={handleBookAppointment}
-          className="w-fit px-7 py-3 rounded-[10px] bg-white text-[rgba(203,150,48,1)] font-bold text-base tracking-[0.5px] shadow hover:bg-gray-100 border border-white transition-colors"
+          className="mt-8 bg-white text-[rgba(203,150,48,1)] font-bold py-3 px-12 rounded-[10px] hover:bg-gray-100 transition-colors text-xl"
         >
           Book an appointment
         </button>
       </div>
-      {/* Right - Woman's photo */}
-      <div className="md:w-1/2 w-full bg-white flex items-center justify-center relative h-[340px] md:h-auto">
-        <img
-          src={woman}
-          alt="Smiling Woman"
-          className="h-[300px] md:h-[500px] w-auto object-cover rounded-xl md:rounded-none shadow-lg drop-shadow-md mx-auto mt-8 mb-4 md:my-0"
-          style={{ maxHeight: "90%", maxWidth: "100%" }}
-        />
-      </div>
     </section>
   );
 };
-
